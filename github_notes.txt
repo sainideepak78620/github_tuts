@@ -51,6 +51,15 @@ Note: don't use --global if you want to keep username and email for specific rep
 -----------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------
+>>Before pushing repo. you must add remote origin.
+
+>To add remote origin
+	git add remote origin "ssh link"
+
+Note: you will get SSH link when you create a repository.
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
 >For Push repos.
 	git push -u origin master
 
@@ -99,10 +108,65 @@ Note: To undo changes as per last commit for multiple/all file use "git checkout
 -----------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------------------------
-Three ways to stage files
+>>Three ways to stage files
 
 1. git add -A		(Stage ALL file)
 2. git add .		(Stage new and modified file, without deleted. Things which are deleted will be skipped)
 3. git add -u		(Stage deleted and modified file, without new. Things which are new will be skipped)
 
 ---------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------
+>To clone a repository from github 
+	git clone "ssh link"		(This will clone a git repository as folder)
+
+		OR
+
+	git clone "ssh link" .		(This will clone a git repository as file of the repo)
+
+---------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------
+>>Ignore files in git by adding .gitignore file
+
+>To create .gitignore file 
+	touch .gitignore
+
+Now open .gitignore in any text editor and write down to folders name, files name or extensions you want to ignore
+
+Syntax:
+
+1. folder_name/		(For folder)
+2. filename.extension	(For file)
+3. *.extension		(to ignore specific extension)
+
+---------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------
+>>Branching
+
+>To see branches
+	git branch
+
+>To create branch
+	git branch "branch_name"
+
+>To switch branch
+	git checkout "branch_name"
+
+>To push the committed changes
+	git push origin "branch_name"
+
+>To merge branch
+	git merge "branch_name"			(switch to the branch where you want to merge a branch after merge push it.)
+
+---------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------
+>>Delete branch
+
+>To delete branch from local machine
+	git branch -d "branch_name"
+
+>To delete branch from remote/github
+	git push origin --delete "branch_name"
