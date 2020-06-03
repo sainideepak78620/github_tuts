@@ -1,0 +1,108 @@
+-----------------------------------------------------------------------------------
+> To check the version 
+	git --version
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+> To get status
+	git status
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+>To initialize a repository
+	git init
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+>To stage a repo.
+	git add .
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+>To commit changes in repo.
+	git commit -m "message"
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+>To see the changes (kisne kya change kiya hai)
+	git log
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+>To change username 
+	git config --global user.name "username"
+
+>To change user email
+	git config --global user.email "email"
+
+Note: --global is used to keep the mentioned username and email for all repos.
+Note: don't use --global if you want to keep username and email for specific repo.
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+>To see username 
+	git config --global user.name
+
+>To see user email
+	git config --global user.email
+
+Note: --global is used to keep the mentioned username and email for all repos.
+Note: don't use --global if you want to keep username and email for specific repo.
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+>For Push repos.
+	git push -u origin master
+
+>For Pull repos.
+	git pull origin master
+
+Note: Before pushing repo. you must add SSH key to github.
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+>To create/add SSH key follow the following steps:
+
+1. Go to profile setting then click SSH and GPG keys.
+2. Then, click "generating SSH keys"
+3. Follow the step mentioned in the webpage.
+4. After following the step 3, click on "Add the SSH key to your GitHub account" to add SSH key to github account.
+5. Copy mentioned command to copy the clipboard of the key.
+6. Go to profile setting then click SSH and GPG keys, then, click new SSH key give "title" and paste "SSH key" then click add key.
+
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+>To see the difference in the file
+	git diff "filename"
+
+>To see changes in repo's file (include all files)
+	git diff
+
+>To see difference at stage level
+	git diff --staged "filename"
+
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
+>To unstage file
+	git reset "filename"
+
+>>Bring file to its last commit or undo the change as per the last commit
+
+1. git reset "filename" (unstaging files)
+2. git checkout "filename" (undo changes as per last commit)
+
+Note: If files are not staged then you can directly undo the changes 2 step.
+Note: To undo changes as per last commit for multiple/all file use "git checkout ."
+
+-----------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------
+Three ways to stage files
+
+1. git add -A		(Stage ALL file)
+2. git add .		(Stage new and modified file, without deleted. Things which are deleted will be skipped)
+3. git add -u		(Stage deleted and modified file, without new. Things which are new will be skipped)
+
+---------------------------------------------------------------------------------------------------------------
