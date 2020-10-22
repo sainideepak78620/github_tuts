@@ -60,10 +60,10 @@ Note: you will get SSH link when you create a repository.
 -----------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------
->For Push repos.
+>To Push repos.
 	git push -u origin master
 
->For Pull repos.
+>To Pull repos.
 	git pull origin master
 
 Note: Before pushing repo. you must add SSH key to github.
